@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaide <kaide@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 20:58:21 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/04 10:36:06 by kaide            ###   ########.fr       */
+/*   Created: 2025/08/04 16:01:03 by kaide             #+#    #+#             */
+/*   Updated: 2025/08/05 18:35:28 by kaide            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	i;
+	size_t	total_size;
+	void	*ptr;
 
-	i = 0;
-	while (i < n && s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	if (nmemb == 0 || size == 0)
 	{
-		i++;
+		return (NULL);
 	}
-	if (i == n)
+	total_size = nmemb * size;
+	ptr = malloc(total_size);
+	if (ptr == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
-	else
-		return (s1[i] - s2[i]);
+	memset(ptr, 0, total_size);
+	return (ptr);
 }

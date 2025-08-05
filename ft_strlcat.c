@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaide <kaide@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 20:58:21 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/04 10:36:06 by kaide            ###   ########.fr       */
+/*   Created: 2025/08/05 18:53:46 by kaide             #+#    #+#             */
+/*   Updated: 2025/08/05 18:58:44 by kaide            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
-	int	i;
-
-	i = 0;
-	while (i < n && s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-	{
-		i++;
-	}
-	if (i == n)
-	{
-		return (0);
-	}
-	else
-		return (s1[i] - s2[i]);
+	
 }

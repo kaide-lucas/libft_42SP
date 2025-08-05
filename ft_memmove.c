@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaide <kaide@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/03 20:58:21 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/04 10:36:06 by kaide            ###   ########.fr       */
+/*   Created: 2025/08/04 10:40:55 by kaide             #+#    #+#             */
+/*   Updated: 2025/08/04 15:28:41 by kaide            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t				i;
+	const unsigned char	*s;
+	unsigned char		*d;
 
 	i = 0;
-	while (i < n && s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (d > s)
 	{
-		i++;
-	}
-	if (i == n)
-	{
-		return (0);
+		i = n;
+		while (i > 0)
+		{
+			i--;
+			d[i] = s[i];
+		}
 	}
 	else
-		return (s1[i] - s2[i]);
+	{
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dest);
 }
