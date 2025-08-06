@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 10:40:55 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/06 16:35:32 by kaidda-s         ###   ########.fr       */
+/*   Created: 2025/07/30 10:57:11 by kaidda-s          #+#    #+#             */
+/*   Updated: 2025/07/30 15:33:11 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	char		*dest;
-	const char	*src;
+	size_t	size;
+	char	*copy_str;
 
-	if ((!s1 || !s2) && (n > 0))
+	size = (ft_strlen(s) + 1);
+	copy_str = (char *)malloc(size * sizeof(char));
+	if (!copy_str)
 	{
 		return (NULL);
 	}
-	dest = (char *)s1;
-	src = (const char *)s2;
-	if (dest < src)
-	{
-		ft_memcpy(dest, src, n);
-	}
-	else
-	{
-		while (n--)
-		{
-			dest[n] = src[n];
-		}
-	}
-	return (s1);
+	ft_memcpy(copy_str, s, size);
+	return (copy_str);
 }
+
+// #include <stdio.h>	
+// int main()
+// {
+// 	char *origin = "Abacate";
+// 	char *copy = ft_strdup(origin);
+// 	printf("%s\n", copy);
+// 	free(copy);
+// 	return(0);
+// }

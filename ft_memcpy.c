@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 10:40:55 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/06 16:35:32 by kaidda-s         ###   ########.fr       */
+/*   Created: 2025/07/28 13:07:22 by kaidda-s          #+#    #+#             */
+/*   Updated: 2025/07/30 15:15:00 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char		*dest;
-	const char	*src;
+	size_t				i;
+	const unsigned char	*s;
+	unsigned char		*d;
 
-	if ((!s1 || !s2) && (n > 0))
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	i = 0;
+	while (i < n)
 	{
-		return (NULL);
+		d[i] = s[i];
+		i++;
 	}
-	dest = (char *)s1;
-	src = (const char *)s2;
-	if (dest < src)
-	{
-		ft_memcpy(dest, src, n);
-	}
-	else
-	{
-		while (n--)
-		{
-			dest[n] = src[n];
-		}
-	}
-	return (s1);
+	return (dest);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char a[20] = "0";
+// 	char b[] = "abcd";
+// 	ft_memcpy(a, b, 4);
+// 	printf("%s\n", a);
+// 	return (0);
+// }
