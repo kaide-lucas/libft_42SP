@@ -6,33 +6,47 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:40:55 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/06 16:35:32 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/08/07 18:22:09 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*dest;
-	const char	*src;
+	unsigned char		*dest_len;
+	unsigned char	*src_len;
+	size_t i;
 
-	if ((!s1 || !s2) && (n > 0))
+	if ((dest == src) || (n == 0))
 	{
-		return (NULL);
+		return (dest);
 	}
-	dest = (char *)s1;
-	src = (const char *)s2;
+	dest_len = (unsigned char *)dest;
+	src_len = (unsigned char *)src;
+	i = 0;
 	if (dest < src)
 	{
-		ft_memcpy(dest, src, n);
+		while (i < n)
+		{
+			dest_len[i] = src_len[i];
+			i++;
+		}
 	}
 	else
 	{
 		while (n--)
-		{
-			dest[n] = src[n];
-		}
+			dest_len[n] = src_len[n];
 	}
-	return (s1);
+	return (dest);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char a[20] = "abc";
+// 	char b[] = "def";
+// 	ft_memmove(a, b, 3);
+// 	printf("%s\n", a);
+// 	return (0);
+// }

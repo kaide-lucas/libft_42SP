@@ -6,15 +6,15 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 10:17:06 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/07/24 13:01:51 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/08/07 19:07:34 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(char c)
+#include <stdio.h>
+
+int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return (c - 32);
-	}
+	if (c >= 97 && c <= 122)
+		c -= 32;
 	return (c);
 }

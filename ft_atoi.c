@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaide <kaide@student.42.fr>                +#+  +:+       +#+        */
+/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/01 22:30:17 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/02 22:27:21 by kaide            ###   ########.fr       */
+/*   Updated: 2025/08/07 19:13:46 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *n)
 {
@@ -19,15 +21,13 @@ int	ft_atoi(const char *n)
 	i = 0;
 	res = 0;
 	signal = 1;
-	while (n[i] == ' ')
+	while ((n[i] >= 9 && n[i] <= 13) || (n[i] == ' '))
 		i++;
 	if (n[i] == '-' || n[i] == '+')
 	{
 		if (n[i] == '-')
 			signal = -1;
-		else
-			signal = 1;
-		i++;
+			i++;
 	}
 	while (n[i] >= '0' && n[i] <= '9')
 	{

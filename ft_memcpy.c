@@ -6,7 +6,7 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 13:07:22 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/07/30 15:15:00 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/08/07 18:22:05 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*s;
 	unsigned char		*d;
 
+	if ((dest == src) || (n == 0))
+	{
+		return (dest);
+	}
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
 	i = 0;
@@ -34,7 +38,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 // {
 // 	char a[20] = "0";
 // 	char b[] = "abcd";
-// 	ft_memcpy(a, b, 4);
+// 	ft_memcpy(a, b, 2);
 // 	printf("%s\n", a);
 // 	return (0);
 // }

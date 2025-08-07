@@ -6,7 +6,7 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 13:09:11 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/07/30 14:45:28 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/08/07 18:42:15 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,21 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
+	unsigned char uc;
 
 	i = 0;
+	uc = (unsigned char)c;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == uc)
 		{
 			return ((char *)&s[i]);
 		}
 		i++;
+	}
+	if (uc == '\0')
+	{
+		return ((char *)&s[i]);
 	}
 	return (NULL);
 }
