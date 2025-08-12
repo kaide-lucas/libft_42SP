@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft.strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kaide <kaide@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/08 17:07:06 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/08/08 17:07:50 by kaidda-s         ###   ########.fr       */
+/*   Created: 2025/08/09 20:23:05 by kaide             #+#    #+#             */
+/*   Updated: 2025/08/09 22:00:10 by kaide            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-	
+	int	len;
+
+	len = ft_strlen(s);
+	while (len >= 0)
+	{
+		if (s[len] == (char)c)
+			return ((char *)&s[len]);
+		len --;
+	}
+	return (NULL);
 }
