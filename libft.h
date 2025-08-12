@@ -6,7 +6,7 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 14:01:56 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/08/07 12:37:06 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/08/08 15:56:05 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <stddef.h>
+# include <unistd.h>
 
 int		ft_isalpha(char c);
 int		ft_isdigit(char c);
@@ -36,5 +37,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif

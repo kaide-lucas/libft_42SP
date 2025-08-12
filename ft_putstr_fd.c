@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/24 10:17:06 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/08/08 17:04:38 by kaidda-s         ###   ########.fr       */
+/*   Created: 2025/08/08 13:44:04 by kaidda-s          #+#    #+#             */
+/*   Updated: 2025/08/08 14:39:09 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }

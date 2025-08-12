@@ -6,7 +6,7 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:40:55 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/07 18:22:09 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/08/08 11:21:03 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*dest_len;
-	unsigned char	*src_len;
-	size_t i;
+	unsigned char		*src_len;
+	size_t				i;
 
 	if ((dest == src) || (n == 0))
 	{
