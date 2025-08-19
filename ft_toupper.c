@@ -6,15 +6,15 @@
 /*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 10:17:06 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/08/08 17:04:38 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2025/08/19 15:41:52 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-		c -= 32;
+		return (c - 32);
 	return (c);
 }
