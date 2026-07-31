@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/Score-125%2F100-success?style=for-the-badge&logo=42" alt="42 Grade" />
+	<img src="https://img.shields.io/badge/Score-100%2F100-success?style=for-the-badge&logo=42" alt="42 Grade" />
 	<img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c" alt="Language C" />
 	<img src="https://img.shields.io/badge/Campus-42%20S%C3%A3o%20Paulo-black?style=for-the-badge" alt="42 SP" />
 </p>
@@ -55,28 +55,6 @@ Funções de utilidade geral não presentes na `libc` padrão ou modificadas par
 | `ft_putnbr_fd` | Escreve um número inteiro em um File Descriptor específico. |
 
 ---
-
-### 🌟 Parte Bônus - Manipulação de Listas Encadeadas
-Estrutura de dados para manipulação de listas encadeadas utilizando a struct `t_list`:
-
-```c
-typedef struct s_list
-{
-    void            *content;
-    struct s_list   *next;
-}   t_list;
-```
-| Função | Descrição |
-| :--- | :--- |
-| `ft_lstnew` | Cria um novo nó da lista com o conteúdo fornecido. |
-| `ft_lstadd_front` | Adiciona um nó no início da lista. |
-| `ft_lstsize` | Retorna o número de nós presentes na lista. |
-| `ft_lstlast` | Retorna o último nó da lista. |
-| `ft_lstadd_back` | Adiciona um nó no final da lista. |
-| `ft_lstdelone` | Libera a memória de um nó individual usando uma função de deleção. |
-| `ft_lstclear` | Deleta e libera todos os nós de uma lista. |
-| `ft_lstiter` | Aplica uma função ao conteúdo de cada nó da lista. |
-| `ft_lstmap` | Cria uma nova lista resultante da aplicação de uma função em cada nó. |
 
 ### 1. Clonar o repositório
 ```bash
