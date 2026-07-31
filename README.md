@@ -65,3 +65,83 @@ typedef struct s_list
     void            *content;
     struct s_list   *next;
 }   t_list;
+```
+| Função | Descrição |
+| :--- | :--- |
+| `ft_lstnew` | Cria um novo nó da lista com o conteúdo fornecido. |
+| `ft_lstadd_front` | Adiciona um nó no início da lista. |
+| `ft_lstsize` | Retorna o número de nós presentes na lista. |
+| `ft_lstlast` | Retorna o último nó da lista. |
+| `ft_lstadd_back` | Adiciona um nó no final da lista. |
+| `ft_lstdelone` | Libera a memória de um nó individual usando uma função de deleção. |
+| `ft_lstclear` | Deleta e libera todos os nós de uma lista. |
+| `ft_lstiter` | Aplica uma função ao conteúdo de cada nó da lista. |
+| `ft_lstmap` | Cria uma nova lista resultante da aplicação de uma função em cada nó. |
+
+### 1. Clonar o repositório
+```bash
+git clone https://github.com/kaide-lucas/libft_42SP.git
+cd libft_42SP
+```
+### 2. Comandos do Makefile
+
+* **`make`** ou **`make all`**: Compila os arquivos da parte obrigatória e gera a biblioteca estática `libft.a`.
+* **`make bonus`**: Compila tanto a parte obrigatória quanto as funções bônus (listas encadeadas) na `libft.a`.
+* **`make clean`**: Remove todos os arquivos objetos (`.o`).
+* **`make fclean`**: Remove os arquivos objetos (`.o`) e o arquivo da biblioteca (`libft.a`).
+* **`make re`**: Executa `fclean` e recompila o projeto do zero.
+
+---
+
+## 🚀 Como Utilizar no seu Projeto
+
+Para utilizar as funções da **Libft** em seus próprios projetos em C, siga os passos abaixo:
+
+### 1. Inclua o cabeçalho no código C
+No seu arquivo de código (ex: `main.c`), inclua o cabeçalho da biblioteca:
+
+```c
+#include "libft.h"
+
+int main(void)
+{
+    char *str = "Hello, 42 SP!";
+    
+    // Usando uma função da libft
+    ft_putendl_fd(str, 1);
+    
+    return (0);
+}
+```
+
+### 2. Compilação apontando para a biblioteca
+Ao compilar seu projeto com `gcc` ou `clang`, certifique-se de indicar onde está o arquivo `libft.a`:
+
+```bash
+# Exemplo 1: Se a libft.a estiver no mesmo diretório do seu main.c
+gcc -Wall -Wextra -Werror main.c -L. -lft -o meu_programa
+
+# Exemplo 2: Se a libft estiver em uma subpasta chamada "libft"
+gcc -Wall -Wextra -Werror main.c -I./libft -L./libft -lft -o meu_programa
+```
+
+---
+
+## 🧪 Testadores Recomendados
+
+Para validar a implementação das funções, vazamentos de memória (leaks) e edge cases, você pode utilizar os seguintes testadores da comunidade 42:
+
+* 🇫🇷 **[Francinette](https://github.com/xicadamelhor/francinette)**: O testador mais completo e atualizado para os projetos da 42 (inclui testes com Moulinette/Norminette e verificação de memória com Valgrind).
+* 🧪 **[libftTester](https://github.com/Tripouille/libftTester)**: Testador com interface visual simples e testes unitários muito detalhados para cada função.
+* ⚡ **[libft-unit-test](https://github.com/alelievr/libft-unit-test)**: Excelente testador para validação rápida de erros de alocação de memória e *segfaults*.
+
+---
+
+## 👤 Autor
+
+Feito por **Kaide Lucas** 👋
+
+* **Campus:** 42 São Paulo
+* **GitHub:** [@kaide-lucas](https://github.com/kaide-lucas)
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaide-lucas)
