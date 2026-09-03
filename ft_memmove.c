@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kaidda-s <kaidda-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 10:40:55 by kaide             #+#    #+#             */
-/*   Updated: 2025/08/15 14:09:00 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2026/01/22 00:12:55 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char a[20] = "abc";
-// 	char b[] = "def";
-// 	ft_memmove(a, b, 3);
-// 	printf("%s\n", a);
-// 	return (0);
-// }

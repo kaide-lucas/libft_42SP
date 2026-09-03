@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kaidda-s <kaidda-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 13:07:22 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/08/07 18:22:05 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2026/01/22 00:12:46 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char a[20] = "0";
-// 	char b[] = "abcd";
-// 	ft_memcpy(a, b, 2);
-// 	printf("%s\n", a);
-// 	return (0);
-// }

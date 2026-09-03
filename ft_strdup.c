@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kaidda-s <kaidda-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 10:57:11 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/08/15 14:09:06 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2026/01/22 00:13:34 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ char	*ft_strdup(const char *s)
 	ft_memcpy(copy_str, s, size);
 	return (copy_str);
 }
-
-// #include <stdio.h>	
-// int main()
-// {
-// 	char *origin = "Abacate";
-// 	char *copy = ft_strdup(origin);
-// 	printf("%s\n", copy);
-// 	free(copy);
-// 	return(0);
-// }

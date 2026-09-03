@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kaidda-s <kaidda-s@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kaidda-s <kaidda-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 14:01:56 by kaidda-s          #+#    #+#             */
-/*   Updated: 2025/08/19 17:15:47 by kaidda-s         ###   ########.fr       */
+/*   Updated: 2026/09/03 17:56:21 by kaidda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_isprint(int c);
-int		ft_strlen(const char *c);
 int		ft_atoi(const char *n);
 void	ft_bzero(void *s, size_t n);
+size_t	ft_strlen(const char *c);
+int		ft_printf(const char *format, ...);
+char	*get_next_line(int fd);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -50,5 +52,6 @@ int		ft_tolower(int c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strrev(char *s);
 
 #endif
